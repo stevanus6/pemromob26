@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".RegisterActivity">
+
+    <!-- Title or header (optional) -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Nama Lengkap input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNamaLengkap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNamaLengkap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Lengkap"
+            android:importantForAccessibility="yes" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Tanggal Lahir input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilTanggalLahir"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilNamaLengkap">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTanggalLahir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tanggal Lahir"
+            android:importantForAccessibility="yes" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Nomor Telepon input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNomorTelepon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilTanggalLahir">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNomorTelepon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nomor Telepon"
+            android:importantForAccessibility="yes" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Username input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilNomorTelepon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:importantForAccessibility="yes" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Password input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilUsername">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:importantForAccessibility="yes" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Register button -->
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="register"
+        app:layout_constraintTop_toBottomOf="@+id/tilPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
